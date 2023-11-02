@@ -1,0 +1,2 @@
+index item in terminal --> change {name} to his index name 
+curl -XGET http://localhost:9200/name/_search\?pretty\=true\&q\=\* 

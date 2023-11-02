@@ -1,0 +1,747 @@
+{
+	"info": {
+		"_postman_id": "c4b07283-a04a-49e6-844a-d9985b66b854",
+		"name": "Full App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26251440",
+		"_collection_link": "https://red-space-779395.postman.co/workspace/E-Commerce~e5cb7bd2-2262-4f65-87e6-62336054ec96/collection/26251440-c4b07283-a04a-49e6-844a-d9985b66b854?action=share&source=collection_link&creator=26251440"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "login - admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"montaser@gmail.com\",\n    \"password\": \"Montser#9\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/backOffice/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"backOffice",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout - admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MzE0MDE0ZGU1ZjVlOThkMDUzYjUxMCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY5NzkwMzcyMiwiZXhwIjoxNjk3OTkwMTIyfQ.a-JvxwTRs1XPXfAObWOc90A7pZL8F3u95YntyTkZ5xU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/backOffice/adminAuth/logout/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"backOffice",
+								"adminAuth",
+								"logout",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"adminName\": \"Montaser Hassan\",\n    \"phoneNumber\": \"01118172440\",\n    \"email\": \"montaser@gmail.com\",\n    \"password\": \"Montser#9\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/backOffice/auth/register/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"backOffice",
+								"auth",
+								"register",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"customerName\": \"Montaser Hassan\",\n    \"phoneNumber\": \"01118172440\",\n    \"email\": \"montaser@gmail.com\",\n    \"password\": \"Montser#9\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login - login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"montaser@gmail.com\",\n    \"password\": \"Montser#9\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/backOffice/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"backOffice",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category - admin",
+			"item": [
+				{
+					"name": "get categories",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MzE0MDE0ZGU1ZjVlOThkMDUzYjUxMCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY5ODU2NzU3MSwiZXhwIjoxNjk4NjUzOTcxfQ.8n3Pie7QnI2gcQhFGtbW_KKQY3Y2lXgtlXRMJbGK9dU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/backOffice/category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"backOffice",
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get category by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MzE0MDE0ZGU1ZjVlOThkMDUzYjUxMCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY5ODU2NzU3MSwiZXhwIjoxNjk4NjUzOTcxfQ.8n3Pie7QnI2gcQhFGtbW_KKQY3Y2lXgtlXRMJbGK9dU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/backOffice/category/653416cde3d73de62f8572e3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"backOffice",
+								"category",
+								"653416cde3d73de62f8572e3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MzE0MDE0ZGU1ZjVlOThkMDUzYjUxMCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY5ODgzNjMwOSwiZXhwIjoxNjk4OTIyNzA5fQ.I1_torP1IrV6bTG4C2LYIAK5QgPCM8eBFO2AM6wQ9rw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"accessories\",\n    \"description\": \"this is accessories\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/backOffice/category/categoryAuth/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"backOffice",
+								"category",
+								"categoryAuth",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MzE0MDE0ZGU1ZjVlOThkMDUzYjUxMCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY5NzkwMzcyMiwiZXhwIjoxNjk3OTkwMTIyfQ.a-JvxwTRs1XPXfAObWOc90A7pZL8F3u95YntyTkZ5xU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"description\": \"this is women's clothes\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/backOffice/category/categoryAuth/65341c98af16a84e75275539",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"backOffice",
+								"category",
+								"categoryAuth",
+								"65341c98af16a84e75275539"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MzE0MDE0ZGU1ZjVlOThkMDUzYjUxMCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY5NzkwMzcyMiwiZXhwIjoxNjk3OTkwMTIyfQ.a-JvxwTRs1XPXfAObWOc90A7pZL8F3u95YntyTkZ5xU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/backOffice/category/categoryAuth/65341c98af16a84e75275539",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"backOffice",
+								"category",
+								"categoryAuth",
+								"65341c98af16a84e75275539"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get category by name",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MzE0MDE0ZGU1ZjVlOThkMDUzYjUxMCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY5ODgzNjMwOSwiZXhwIjoxNjk4OTIyNzA5fQ.I1_torP1IrV6bTG4C2LYIAK5QgPCM8eBFO2AM6wQ9rw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"L\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/backOffice/category/name/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"backOffice",
+								"category",
+								"name",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product - admin",
+			"item": [
+				{
+					"name": "get products",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MzE0MDE0ZGU1ZjVlOThkMDUzYjUxMCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY5NzkwMzcyMiwiZXhwIjoxNjk3OTkwMTIyfQ.a-JvxwTRs1XPXfAObWOc90A7pZL8F3u95YntyTkZ5xU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/backOffice/product/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"backOffice",
+								"product",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get product by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MzE0MDE0ZGU1ZjVlOThkMDUzYjUxMCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY5NzkwMzcyMiwiZXhwIjoxNjk3OTkwMTIyfQ.a-JvxwTRs1XPXfAObWOc90A7pZL8F3u95YntyTkZ5xU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/backOffice/product/65341ed4484257301fbbc23b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"backOffice",
+								"product",
+								"65341ed4484257301fbbc23b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get product by category id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MzE0MDE0ZGU1ZjVlOThkMDUzYjUxMCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY5NzkwMzcyMiwiZXhwIjoxNjk3OTkwMTIyfQ.a-JvxwTRs1XPXfAObWOc90A7pZL8F3u95YntyTkZ5xU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/backOffice/product/category/653416cde3d73de62f8572e3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"backOffice",
+								"product",
+								"category",
+								"653416cde3d73de62f8572e3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get products by pagination",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MzE0MDE0ZGU1ZjVlOThkMDUzYjUxMCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY5ODA1MDEzMSwiZXhwIjoxNjk4MTM2NTMxfQ.pfRZLSHsJ6UBn8KO0PcNzhVDXQRH1n1rVe0ojF0wsn4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/backOffice/product/pagination/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"backOffice",
+								"product",
+								"pagination",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MzE0MDE0ZGU1ZjVlOThkMDUzYjUxMCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY5NzkwMzcyMiwiZXhwIjoxNjk3OTkwMTIyfQ.a-JvxwTRs1XPXfAObWOc90A7pZL8F3u95YntyTkZ5xU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"categoryName\": \"men's clothes\",\n    \"name\": \"shirt\", \n    \"price\": 10, \n    \"color\": \"red\", \n    \"quantity\": 10, \n    \"description\": \"this is shirt\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/backOffice/product/productAuth/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"backOffice",
+								"product",
+								"productAuth",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MzE0MDE0ZGU1ZjVlOThkMDUzYjUxMCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY5NzkwMzcyMiwiZXhwIjoxNjk3OTkwMTIyfQ.a-JvxwTRs1XPXfAObWOc90A7pZL8F3u95YntyTkZ5xU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"price\": 100\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/backOffice/product/productAuth/65341ed4484257301fbbc23e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"backOffice",
+								"product",
+								"productAuth",
+								"65341ed4484257301fbbc23e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MzE0MDE0ZGU1ZjVlOThkMDUzYjUxMCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY5NzkwMzcyMiwiZXhwIjoxNjk3OTkwMTIyfQ.a-JvxwTRs1XPXfAObWOc90A7pZL8F3u95YntyTkZ5xU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/backOffice/product/productAuth/65341ed4484257301fbbc23e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"backOffice",
+								"product",
+								"productAuth",
+								"65341ed4484257301fbbc23e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search on products with name",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MzE0MDE0ZGU1ZjVlOThkMDUzYjUxMCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY5ODU2NzU3MSwiZXhwIjoxNjk4NjUzOTcxfQ.8n3Pie7QnI2gcQhFGtbW_KKQY3Y2lXgtlXRMJbGK9dU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/backOffice/product/search?name=sh",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"backOffice",
+								"product",
+								"search"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "sh"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
