@@ -3,7 +3,8 @@ import itemExistsInElasticSearch from "./itemExists.util";
 
 
 
-const addIndexToElasticSearch = async (cachedItem, indexName: string) => {
+const addIndexToElasticSearch = async (cachedItem: string, indexName: string) => {
+    console.log('cachedItem: ', cachedItem)
     const items = JSON.parse(cachedItem);
     for (const item of items) {
         delete item._id;

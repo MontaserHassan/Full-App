@@ -1,2 +1,17 @@
-index item in terminal --> change {name} to his index name 
-curl -XGET http://localhost:9200/name/_search\?pretty\=true\&q\=\* 
+elasticSearch: 
+    index item in terminal --> change {name} to his index name (like product) 
+    command: curl -XGET http://localhost:9200/name/_search\?pretty\=true\&q\=\*
+
+    // to add or remove or search index
+    file: elasticsearch.connection.ts
+
+
+redis: 
+    1- use redis cloud console from browser 
+        link: https://app.redislabs.com/#/databases
+    2- create new database
+    3- edit database
+    4- close default user
+    5- get grant to current user
+    6- get public endpoint and put it in redis.connection.ts
+    7- don't forget to delete port from redis link 

@@ -1,7 +1,7 @@
 import { redisClient } from '../../Config/index.config';
 
 
-const refreshCacheForKey = async (key, fetchFromDatabase) => {
+const refreshCacheForKey = async (key: string, fetchFromDatabase: any) => {
     try {
         const newData = await fetchFromDatabase();
         await redisClient.set(key, JSON.stringify(newData));

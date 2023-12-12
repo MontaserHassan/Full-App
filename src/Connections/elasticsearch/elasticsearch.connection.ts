@@ -21,7 +21,7 @@ async function connectToElasticsearch() {
     };
     if (!connected) { console.error('Failed to connect to Elasticsearch after multiple retries.'); };
 
-    const indexName = 'product';
+    // const indexName = 'product';
     // await client.indices.create({ index: indexName });
     // console.log(`Created index: ${indexName} `);
     // await client.indices.delete({ index: indexName });
